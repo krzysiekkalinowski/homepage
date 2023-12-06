@@ -8,14 +8,17 @@ html {
     box-sizing: inherit;
 }
 
-main {
+.main {
     background-color: #fefefe;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-h1,
-h2,
-h3 {
-    color: #1460aa;
+.header-heading {
+    font-size: 40px;
+    font-weight: 300;
+    color: hotpink;
 }
 
 .header-img {
@@ -24,8 +27,3 @@ h3 {
     max-width: 100%;
 }
 
-.header-heading {
-    font-size: 40px;
-    font-weight: 300;
-    color: hotpink;
-}
