@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="normalize.css" rel="stylesheet" type="text/css" />
     <title>Nauka JS</title>
-</head>
-<body>
-    <header>
-      <nav>
-        <a href="index.html">Strona główna</a>
-        <a href="nauka-html.html">Nauka HTML</a>
-        <a href="nauka-css.html">Nauka CSS</a>
-        <a href="nauka-js.html">Nauka JS</a>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="top-navigation">
+        <a class="top-navigation__link" href="index.html">Strona główna</a>
+        <a class="top-navigation__link" href="nauka-html.html">Nauka HTML</a>
+        <a class="top-navigation__link" href="nauka-css.html">Nauka CSS</a>
+        <a class="top-navigation__link" href="nauka-js.html">Nauka JS</a>
       </nav>
     </header>
-    <main>
-      <header>
-        <h1 class="header-heading">Strona projektowa WTF</h1>
-        <img class="header-img" src="img/logo-js.png" alt="logo JS">
+    <main class="main">
+      <header class="header">
+        <h1 class="header__heading">Strona projektowa WTF</h1>
+        <img
+          class="header__img"
+          src="img/przegladarki.png"
+          alt="loga przeglądarek"
+        />
       </header>
-      <section>
-        <h2>Lorem ipsum dolor</h2>
-        <p>
+      <section class="main-section">
+        <h2 class="main-section__heading">Lorem ipsum dolor</h2>
+        <p class="main-section__description">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
           neque id veritatis vitae voluptas nemo consequuntur praesentium at
           libero distinctio a reiciendis modi perspiciatis facere vero fugiat,
           tenetur minus veniam!
         </p>
       </section>
-      <section>
-        <h2>Lorem ipsum dolor</h2>
-        <article>
-          <h3>Lorem ipsum dolor</h3>
-          <p>
+      <section class="main-section">
+        <h2 class="main-section__heading">Lorem ipsum dolor</h2>
+        <article class="article">
+          <h3 class="article__heading">Lorem ipsum dolor</h3>
+          <p class="article__content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
             neque culpa laudantium delectus quos impedit quidem autem animi
             aliquid rerum, aliquam odit dolor quasi est unde, provident
@@ -44,9 +48,9 @@
             est unde, provident dignissimos ducimus quas.
           </p>
         </article>
-        <article>
-          <h3>Lorem ipsum dolor</h3>
-          <p>
+        <article class="article">
+          <h3 class="article__heading">Lorem ipsum dolor</h3>
+          <p class="article__content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
             neque culpa laudantium delectus quos impedit quidem autem animi
             aliquid rerum, aliquam odit dolor quasi est unde, provident
@@ -58,11 +62,13 @@
         </article>
       </section>
     </main>
-    <footer>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, vitae
-      placeat adipisci temporibus, aspernatur reiciendis recusandae inventore
-      hic necessitatibus voluptate dolor laudantium at excepturi ullam iusto
-      beatae et est sint!
+    <footer class="page-footer">
+      <p class="page-footer__content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, vitae
+        placeat adipisci temporibus, aspernatur reiciendis recusandae inventore
+        hic necessitatibus voluptate dolor laudantium at excepturi ullam iusto
+        beatae et est sint!
+      </p>
     </footer>
   </body>
 </html>
