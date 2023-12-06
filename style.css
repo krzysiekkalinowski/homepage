@@ -1,14 +1,29 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 main {
     background-color: #fefefe;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     color: #1460aa;
 }
+
 .header-img {
     width: 500px;
     height: auto;
     max-width: 100%;
 }
+
 .header-heading {
     font-size: 40px;
     font-weight: 300;
