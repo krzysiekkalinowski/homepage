@@ -60,6 +60,11 @@
             est unde, provident dignissimos ducimus quas.
           </p>
         </article>
+        <article class="article">
+          <h3 class="article__heading">Lorem ipsum dolor</h3>
+          <p class="article__content article__content--js">
+          </p>
+        </article>
       </section>
     </main>
     <footer class="page-footer">
@@ -72,6 +77,8 @@
     </footer>
     <script>
       console.log("Witaj na stronie głównej");
+      const emptyArticle = document.querySelector('.article__content--js');
+      emptyArticle.innerHTML = 'Ten tekst pojawił się dzięki JS';
     </script>
   </body>
 </html>
