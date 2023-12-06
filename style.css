@@ -15,15 +15,14 @@ html {
     margin: 0 auto;
 }
 
-.header-heading {
+.header__heading {
     font-size: 40px;
     font-weight: 300;
     color: hotpink;
 }
 
-.header-img {
-    width: 500px;
-    height: auto;
-    max-width: 100%;
+.header__img {
+    width: 100%;
+    max-width: 500px;
 }
 
