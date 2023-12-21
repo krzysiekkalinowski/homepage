@@ -37,3 +37,22 @@ body {
     justify-content: center;
     gap: 1rem;
 }
+
+.article-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .article-section {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+    } 
+}
+
+@media (min-width: 1024px) {
+    .article-section {
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+}
