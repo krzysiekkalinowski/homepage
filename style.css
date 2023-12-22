@@ -60,7 +60,9 @@ body {
 
 .page-header {
     background-color: #8e9aaf;
-    padding-top: 50px;
+    padding-top: 65px;
+    position: sticky;
+    top: 0;
 }
 
 .top-navigation {
@@ -74,6 +76,7 @@ body {
 
 .top-navigation--open {
     display: flex;
+    border-top: 1px solid white;
 }
 
 .top-navigation__link {
