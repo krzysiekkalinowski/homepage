@@ -10,4 +10,3 @@ hamburger.addEventListener('click', () => {
       const navigation = document.querySelector('.top-navigation--js');
       navigation.classList.toggle('top-navigation--open');
 })
-
