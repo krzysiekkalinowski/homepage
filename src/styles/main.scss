@@ -1,0 +1,141 @@
+$tablet: 768px;
+$desktop: 1024px;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    hsla(203, 69%, 84%, 1) 0%,
+    hsla(18, 76%, 85%, 1) 100%
+  );
+}
+
+.main {
+  background-color: #fefefe;
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  padding: 16px;
+  @media screen and (min-width: $tablet) {
+    padding: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    border-radius: 16px;
+  }
+}
+
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 16px;
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  @media screen and (min-width: $tablet) {
+    gap: 24px;
+  }
+  &__heading {
+    font-size: 32px;
+    font-weight: 300;
+    color: hotpink;
+    margin: 0;
+    @media screen and (min-width: $tablet) {
+      font-size: 40px;
+    }
+  }
+  &__img {
+    width: 500px;
+    max-width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.main-section__heading::after {
+  content: "";
+  width: 0.8em;
+  height: 0.8em;
+  display: inline-block;
+  border-radius: 50%;
+  background: hotpink;
+  margin-left: 0.5rem;
+}
+
+.page-footer {
+  background-color: #8e9aaf;
+  padding: 0.25rem 0;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.page-header {
+  background-color: #8e9aaf;
+  padding-top: 65px;
+  position: sticky;
+  top: 0;
+  @media screen and (min-width: $tablet) {
+    padding-top: 0;
+  }
+}
+
+.top-navigation {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  padding: 16px;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    display: flex;
+  }
+  &__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    @media screen and (min-width: $tablet) {
+      letter-spacing: 0;
+    }
+  }
+  &--open {
+    display: flex;
+    border-top: 1px solid white;
+  }
+}
