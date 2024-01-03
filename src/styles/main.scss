@@ -119,6 +119,42 @@ body {
   }
 }
 
+.timezones-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  @media screen and (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.timezone {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  box-shadow: inset 0 0 10rem 4rem #00000095;
+  display: flex;
+  justify-content: center;
+  filter: grayscale(.75);
+  border-radius: 16px;
+  &__title {
+    font-size: 24px;
+    color: white;
+  }
+  &[data-timezone="local"] {
+    background: center / contain no-repeat url(../img/mapa-kompas.jpg);
+  }
+  &[data-timezone="America/New_York"] {
+    background: center / contain no-repeat url(../img/kapitol.jpg);
+  }
+  &[data-timezone="Asia/Shanghai"] {
+    background: center / contain no-repeat url(../img/swiatynia-pekin.jpg);
+  }
+}
+
 .top-navigation {
   display: none;
   flex-direction: column;
