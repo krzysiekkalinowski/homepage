@@ -36,14 +36,20 @@ body {
 .article-container {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 16px;
+  gap: 16px;
   @media screen and (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
-    column-gap: 24px;
+    gap: 24px;
   }
   @media screen and (min-width: $desktop) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.article {
+  padding: 16px;
+  border-radius: 16px;
+  background: #dee2ff;
 }
 
 .hamburger {
