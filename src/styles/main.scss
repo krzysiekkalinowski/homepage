@@ -1,195 +1,234 @@
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&display=swap');
 
 
-$tablet: 768px;
-$desktop: 1024px;
+  $tablet: 768px;
+  $desktop: 1024px;
 
-html {
-  box-sizing: border-box;
-  font-family: 'Noto Sans', sans-serif;
+:root {
+  --pageBackgroundColor: linear-gradient(90deg,
+  hsla(203, 69%, 84%, 1) 0%,
+  hsla(18, 76%, 85%, 1) 100%);
+  --contentBackgroundColor: #fefefe;
+  --articleBackgroundColor: #dee2ff;
+  --textColor: #202020;
+  --footerHeaderBackground: #8e9aaf;
+  --hamburgerColor: transparent;
 }
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-body {
-  background: linear-gradient(
-    90deg,
-    hsla(203, 69%, 84%, 1) 0%,
-    hsla(18, 76%, 85%, 1) 100%
-  );
-}
-
-.main {
-  background-color: #fefefe;
-  width: 100%;
-  max-width: 1200px;
-  margin: 1.5rem auto;
-  padding: 16px;
-  @media screen and (min-width: $tablet) {
-    padding: 24px;
+@media (prefers-color-scheme: dark) {
+  :root {
+  --pageBackgroundColor: rgb(34, 34, 34);
+  --contentBackgroundColor: #000;
+  --articleBackgroundColor: rgb(34, 34, 34);
+  --textColor: #ffffff;
+  --footerHeaderBackground: #000;
+  --hamburgerColor: #ffffff;
   }
-  @media screen and (min-width: $desktop) {
+}
+
+  html {
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--textColor);
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    background: var(--pageBackgroundColor); 
+  }
+
+  .main {
+    background-color: var(--contentBackgroundColor);
+    width: 100%;
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 16px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      border-radius: 16px;
+    }
+  }
+
+  .article-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .article {
+    padding: 16px;
     border-radius: 16px;
+    background: var(--articleBackgroundColor);
   }
-}
 
-.article-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  @media screen and (min-width: $tablet) {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+  .hamburger {
+    background-color: var(--hamburgerColor);
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
   }
-  @media screen and (min-width: $desktop) {
-    grid-template-columns: 1fr 1fr 1fr;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @media screen and (min-width: $tablet) {
+      gap: 24px;
+    }
+
+    &__heading {
+      font-size: 32px;
+      font-weight: 400;
+      color: hotpink;
+      margin: 0;
+
+      @media screen and (min-width: $tablet) {
+        font-size: 40px;
+      }
+    }
+
+    &__img {
+      width: 500px;
+      max-width: 100%;
+    }
   }
-}
 
-.article {
-  padding: 16px;
-  border-radius: 16px;
-  background: #dee2ff;
-}
-
-.hamburger {
-  background-color: transparent;
-  border: none;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  @media screen and (min-width: $tablet) {
+  .hidden {
     display: none;
   }
-}
 
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  @media screen and (min-width: $tablet) {
-    gap: 24px;
+  .main-section__heading::after {
+    content: "";
+    width: 0.8em;
+    height: 0.8em;
+    display: inline-block;
+    border-radius: 50%;
+    background: hotpink;
+    margin-left: 0.5rem;
   }
-  &__heading {
-    font-size: 32px;
-    font-weight: 400;
-    color: hotpink;
-    margin: 0;
-    @media screen and (min-width: $tablet) {
-      font-size: 40px;
-    }
-  }
-  &__img {
-    width: 500px;
-    max-width: 100%;
-  }
-}
 
-.hidden {
-  display: none;
-}
-
-.main-section__heading::after {
-  content: "";
-  width: 0.8em;
-  height: 0.8em;
-  display: inline-block;
-  border-radius: 50%;
-  background: hotpink;
-  margin-left: 0.5rem;
-}
-
-.page-footer {
-  background-color: #8e9aaf;
-  padding: 0.25rem 0;
-  display: flex;
-  justify-content: center;
-  color: white;
-}
-
-.page-header {
-  background-color: #8e9aaf;
-  padding-top: 65px;
-  position: sticky;
-  top: 0;
-  @media screen and (min-width: $tablet) {
-    padding-top: 0;
-  }
-}
-
-.timezones-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-  @media screen and (min-width: $tablet) {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
-  @media screen and (min-width: $desktop) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.timezone {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  box-shadow: inset 0 0 10rem 4rem #00000095;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  filter: grayscale(.75);
-  border-radius: 16px;
-  &__title {
-    font-size: 24px;
-    font-weight: 400;
-  }
-  &__data {
-    font-weight: 600;
-    font-size: 22px;
-    text-align: center;
-    text-shadow:  #fefefe 1px 0 10px;
-  }
-  &[data-timezone="local"] {
-    background: center / contain no-repeat url(../img/mapa-kompas.jpg);
-  }
-  &[data-timezone="America/New_York"] {
-    background: center / contain no-repeat url(../img/kapitol.jpg);
-  }
-  &[data-timezone="Asia/Shanghai"] {
-    background: center / contain no-repeat url(../img/swiatynia-pekin.jpg);
-  }
-}
-
-.top-navigation {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  justify-content: center;
-  padding: 16px;
-  @media screen and (min-width: $tablet) {
-    flex-direction: row;
+  .page-footer {
+    background-color: var(--footerHeaderBackground);
+    padding: 0.25rem 0;
     display: flex;
-  }
-  &__link {
+    justify-content: center;
     color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    display: block;
+  }
+
+  .page-header {
+    background-color: var(--footerHeaderBackground);
+    padding-top: 65px;
+    position: sticky;
+    top: 0;
+
     @media screen and (min-width: $tablet) {
-      letter-spacing: 0;
+      padding-top: 0;
     }
   }
-  &--open {
-    display: flex;
-    border-top: 1px solid white;
+
+  .timezones-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    @media screen and (min-width: $tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
-}
+
+  .timezone {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    box-shadow: inset 0 0 10rem 4rem #00000095;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: grayscale(.75);
+    border-radius: 16px;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 400;
+    }
+
+    &__data {
+      font-weight: 600;
+      font-size: 22px;
+      text-align: center;
+      text-shadow: #fefefe 1px 0 10px;
+    }
+
+    &[data-timezone="local"] {
+      background: center / contain no-repeat url(../img/mapa-kompas.jpg);
+    }
+
+    &[data-timezone="America/New_York"] {
+      background: center / contain no-repeat url(../img/kapitol.jpg);
+    }
+
+    &[data-timezone="Asia/Shanghai"] {
+      background: center / contain no-repeat url(../img/swiatynia-pekin.jpg);
+    }
+  }
+
+  .top-navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 16px;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      display: flex;
+    }
+
+    &__link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      display: block;
+
+      @media screen and (min-width: $tablet) {
+        letter-spacing: 0;
+      }
+    }
+
+    &--open {
+      display: flex;
+      border-top: 1px solid white;
+    }
+  }
