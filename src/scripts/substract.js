@@ -1,0 +1,1 @@
+export const substractNumbers = (a, b) => a - b;

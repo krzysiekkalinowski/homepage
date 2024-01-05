@@ -1,0 +1,54 @@
+:root {
+    --pageBackgroundColor: linear-gradient(90deg,
+    hsla(203, 69%, 84%, 1) 0%,
+    hsla(18, 76%, 85%, 1) 100%);
+    --contentBackgroundColor: #fefefe;
+    --articleBackgroundColor: #dee2ff;
+    --textColor: #202020;
+    --footerHeaderBackground: #8e9aaf;
+    --hamburgerColor: transparent;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+    --pageBackgroundColor: rgb(34, 34, 34);
+    --contentBackgroundColor: #000;
+    --articleBackgroundColor: rgb(34, 34, 34);
+    --textColor: #ffffff;
+    --footerHeaderBackground: #000;
+    --hamburgerColor: #ffffff;
+    }
+  }
+  
+  $tablet: 768px;
+  $desktop: 1024px; 
+
+.top-navigation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 16px;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      display: flex;
+    }
+
+    &__link {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      display: block;
+
+      @media screen and (min-width: $tablet) {
+        letter-spacing: 0;
+      }
+    }
+
+    &--open {
+      display: flex;
+      border-top: 1px solid white;
+    }
+  }
