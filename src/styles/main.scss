@@ -149,8 +149,20 @@ html {
     padding-top: 65px;
     position: sticky;
     top: 0;
-
+    z-index: 1;
     @media screen and (min-width: $tablet) {
       padding-top: 0;
+    }
+    &__homepage-link {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    &__logo {
+      padding: 5px;
+      width: 60px;
+      @media screen and (min-width: $tablet) {
+        width: 55px;
+      }
     }
   }
