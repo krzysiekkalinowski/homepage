@@ -3,6 +3,7 @@ import { DateTime } from "luxon";
 import { hamburger } from "./hamburger";
 import { substractNumbers as substract } from "./substract";
 import { arrayElementsAddition } from "./array";
+import { fetch } from "./fetch";
 
 
 /* funkcja powitalna */

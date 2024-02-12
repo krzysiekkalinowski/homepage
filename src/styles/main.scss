@@ -126,14 +126,16 @@ html {
     display: none;
   }
 
-  .main-section__heading::after {
-    content: "";
-    width: 0.8em;
-    height: 0.8em;
-    display: inline-block;
-    border-radius: 50%;
-    background: hotpink;
-    margin-left: 0.5rem;
+  .main-section {
+    &__heading::after {
+      content: "";
+      width: 0.8em;
+      height: 0.8em;
+      display: inline-block;
+      border-radius: 50%;
+      background: hotpink;
+      margin-left: 0.5rem;
+    }
   }
 
   .page-footer {
@@ -164,5 +166,19 @@ html {
       @media screen and (min-width: $tablet) {
         width: 55px;
       }
+    }
+  }
+
+  .repositories-listing {
+    padding: 16px;
+    border-radius: 16px;
+    list-style-type: none;
+    background: var(--articleBackgroundColor);
+    &__item {
+      margin-bottom: 12px;
+    }
+    &__link {
+      color: var(--textColor);
+      font-size: 1.1rem;
     }
   }
