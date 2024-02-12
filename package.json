@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cow": "cowsay Siemanko",
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html--public-url=https://homepage-wtf.netlify.app/"
+    "build": "parcel build src/index.html --public-url=https://homepage-wtf.netlify.app/"
   },
   "keywords": [],
   "author": "",
