@@ -4,6 +4,7 @@ import { hamburger } from "./hamburger";
 import { substractNumbers as substract } from "./substract";
 import { arrayElementsAddition } from "./array";
 import { fetch } from "./fetch";
+import { confetti } from "./confetti";
 
 
 /* funkcja powitalna */
@@ -39,3 +40,6 @@ document.querySelectorAll('.timezone').forEach((element) => {
 /* funkcja wykorzystujące pętle i tablice */
 const functionArray = [1, 2, 56, 91, 4];
 arrayElementsAddition(functionArray);
+
+/*Confetti*/
+setInterval(checkTime, 1000);

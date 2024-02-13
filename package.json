@@ -15,10 +15,11 @@
         "@parcel/transformer-sass": "^2.10.3",
         "cowsay": "^1.5.0",
         "parcel": "^2.10.3",
-        "sharp": "^0.31.3"
+        "sharp": "^0.33.1"
     },
     "dependencies": {
         "@types/date-fns": "^2.6.0",
+        "canvas-confetti": "^1.9.2",
         "luxon": "^3.4.4"
     }
 }
