@@ -6,7 +6,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "cow": "cowsay Siemanko",
         "start": "parcel src/index.html",
-        "build": "parcel build src/index.html --public-url=https://homepage-wtf.netlify.app/"
+        "build": "parcel build src/index.html"
     },
     "keywords": [],
     "author": "",
@@ -15,11 +15,12 @@
         "@parcel/transformer-sass": "^2.10.3",
         "cowsay": "^1.5.0",
         "parcel": "^2.10.3",
-        "sharp": "^0.33.1"
+        "sharp": "^0.31.3"
     },
     "dependencies": {
         "@types/date-fns": "^2.6.0",
         "canvas-confetti": "^1.9.2",
+        "js-confetti": "^0.12.0",
         "luxon": "^3.4.4"
     }
 }
